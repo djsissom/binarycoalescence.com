@@ -8,6 +8,7 @@
    ========================================================================== */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300&subset=latin,greek);
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500&display=swap");
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:100);
 /* line 11, assets/style/_boilerplate_prefix.scss */
 html {
@@ -101,6 +102,675 @@ textarea {
   src: url(../fonts/iwona-bold.otf);
 }
 
+/* line 1, assets/style/_layout.scss */
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 8, assets/style/_layout.scss */
+#content {
+  flex: 1;
+}
+
+/* line 12, assets/style/_layout.scss */
+header {
+  justify-content: center;
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 0;
+  container-type: inline-size;
+  container-name: header;
+}
+
+/* line 22, assets/style/_layout.scss */
+header #logo svg {
+  width: 100%;
+}
+
+/* line 26, assets/style/_layout.scss */
+header #logo img {
+  width: 25%;
+}
+
+@media (max-width: 80em) {
+  /* line 26, assets/style/_layout.scss */
+  header #logo img {
+    width: 35%;
+  }
+}
+
+@media (max-width: 50em) {
+  /* line 26, assets/style/_layout.scss */
+  header #logo img {
+    width: 60%;
+  }
+}
+
+/* line 39, assets/style/_layout.scss */
+header #title {
+  margin-top: 1em;
+  padding-bottom: 3em;
+}
+
+/* line 40, assets/style/_layout.scss */
+header #title h1, header #title h2 {
+  margin: 0;
+}
+
+@container header (max-width: 50em) {
+  /* line 48, assets/style/_layout.scss */
+  header h1 {
+    font-size: 8cqw;
+  }
+  /* line 51, assets/style/_layout.scss */
+  header h2 {
+    font-size: 4cqw;
+  }
+}
+
+@container header (min-width: 50em) {
+  /* line 57, assets/style/_layout.scss */
+  header h1 {
+    font-size: 6cqw;
+  }
+  /* line 60, assets/style/_layout.scss */
+  header h2 {
+    font-size: 2.5cqw;
+  }
+}
+
+@container header (min-width: 80em) {
+  /* line 66, assets/style/_layout.scss */
+  header h1 {
+    font-size: 4cqw;
+  }
+  /* line 69, assets/style/_layout.scss */
+  header h2 {
+    font-size: 1.5cqw;
+  }
+}
+
+/* line 74, assets/style/_layout.scss */
+article > section {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (max-width: 50em) {
+  /* line 74, assets/style/_layout.scss */
+  article > section {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+/* line 86, assets/style/_layout.scss */
+section.terminals {
+  padding-top: 2rem;
+}
+
+/* line 90, assets/style/_layout.scss */
+#content h2 {
+  text-align: center;
+  word-spacing: 0.2em;
+  font-size: 280%;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 50em) {
+  /* line 90, assets/style/_layout.scss */
+  #content h2 {
+    font-size: 165%;
+  }
+}
+
+/* line 101, assets/style/_layout.scss */
+span.smaller {
+  font-size: 75%;
+}
+
+/* line 106, assets/style/_layout.scss */
+section.intro ul {
+  text-align: left;
+  font-size: 100%;
+}
+
+@media (min-width: 50em) {
+  /* line 106, assets/style/_layout.scss */
+  section.intro ul {
+    columns: 2;
+  }
+}
+
+@media (min-width: 80em) {
+  /* line 106, assets/style/_layout.scss */
+  section.intro ul {
+    columns: 4;
+  }
+}
+
+/* line 118, assets/style/_layout.scss */
+section.intro ul li {
+  margin-right: 1em;
+}
+
+/* line 122, assets/style/_layout.scss */
+section.intro p {
+  font-size: 120%;
+  text-align: justify;
+}
+
+/* line 128, assets/style/_layout.scss */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  max-width: 50em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 135, assets/style/_layout.scss */
+.buttons a {
+  display: block;
+  width: 8em;
+  border: 3px solid rgba(10, 3, 15, 0.75);
+  padding: 1em;
+  font-size: 150%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 1;
+  margin: 1em;
+}
+
+/* line 147, assets/style/_layout.scss */
+.buttons a span {
+  display: inline-block;
+  line-height: 1;
+  vertical-align: text-top;
+}
+
+@media (max-width: 50em) {
+  /* line 158, assets/style/_layout.scss */
+  section.terminal {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 80em) {
+  /* line 164, assets/style/_layout.scss */
+  section.terminal {
+    font-size: 85%;
+  }
+}
+
+@media (min-width: 50em) {
+  /* line 170, assets/style/_layout.scss */
+  section.terminals {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  /* line 176, assets/style/_layout.scss */
+  section.terminal {
+    grid-column: span 2;
+    font-variant-ligatures: none;
+  }
+  /* line 181, assets/style/_layout.scss */
+  section.terminal.left {
+    grid-column: 1;
+  }
+  /* line 185, assets/style/_layout.scss */
+  section.terminal.right {
+    grid-column: 2;
+  }
+  /* line 189, assets/style/_layout.scss */
+  section.terminal.tall {
+    grid-row: 1 / 3;
+  }
+  /* line 193, assets/style/_layout.scss */
+  pre {
+    margin: 0;
+    white-space: pre;
+  }
+}
+
+/* line 199, assets/style/_layout.scss */
+section.project {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* line 202, assets/style/_layout.scss */
+section.project .image {
+  width: 6em;
+  padding: 0;
+  margin-right: 3em;
+}
+
+/* line 207, assets/style/_layout.scss */
+section.project svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+/* line 213, assets/style/_layout.scss */
+section.project .text {
+  width: 100%;
+  padding-top: 0;
+}
+
+/* line 216, assets/style/_layout.scss */
+section.project .text h3 {
+  padding-top: 0;
+  margin-top: 0;
+  line-height: 0.8;
+}
+
+/* line 224, assets/style/_layout.scss */
+footer {
+  text-align: center;
+  min-height: 10em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 120%;
+}
+
+/* line 4, assets/style/_style.scss */
+body {
+  font-family: "iwona-light", sans-serif;
+  color: rgba(10, 3, 15, 0.75);
+}
+
+/* line 8, assets/style/_style.scss */
+body a:link,
+body a:active,
+body a:visited {
+  color: rgba(10, 3, 15, 0.75);
+}
+
+/* line 11, assets/style/_style.scss */
+body a:hover {
+  color: #9999FF;
+}
+
+/* line 13, assets/style/_style.scss */
+body a {
+  transition: color .4s;
+  color: rgba(10, 3, 15, 0.75);
+}
+
+/* line 20, assets/style/_style.scss */
+.highlight {
+  color: #5f3d8f;
+}
+
+/* line 24, assets/style/_style.scss */
+a.button {
+  transition: color 1s, background 0.5s;
+}
+
+/* line 28, assets/style/_style.scss */
+a.button:hover {
+  color: #E9E2EE;
+  background: rgba(10, 3, 15, 0.75);
+}
+
+/* line 33, assets/style/_style.scss */
+p {
+  hyphens: auto;
+}
+
+/* line 37, assets/style/_style.scss */
+header {
+  background-color: black;
+  color: white;
+  position: relative;
+}
+
+/* line 42, assets/style/_style.scss */
+header .binary {
+  /*
+		@media(max-width: $mobile-transition-width) {
+			display: none;
+		}
+		*/
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-wrap: anywhere;
+  overflow: hidden;
+  font-family: "Fira Code", monospace;
+  font-weight: 300;
+  font-size: 80%;
+  z-index: -2;
+}
+
+/* line 61, assets/style/_style.scss */
+header .binary::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+/* line 71, assets/style/_style.scss */
+header #logo::before {
+  content: '';
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75) 0%, black 30%, black 70%, rgba(0, 0, 0, 0.75) 100%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+/* line 83, assets/style/_style.scss */
+header #title {
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 25%, rgba(64, 47, 88, 0.75) 50%, white 100%);
+}
+
+/* line 87, assets/style/_style.scss */
+header h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+/* line 92, assets/style/_style.scss */
+header h2 {
+  font-family: "Fira Code", monospace;
+  font-weight: 300;
+}
+
+/* line 98, assets/style/_style.scss */
+footer {
+  background-color: black;
+  color: white;
+  position: relative;
+}
+
+/* line 103, assets/style/_style.scss */
+footer .binary {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-wrap: anywhere;
+  overflow: hidden;
+  font-family: "Fira Code", monospace;
+  font-weight: 300;
+  font-size: 80%;
+}
+
+/* line 116, assets/style/_style.scss */
+footer .binary:after {
+  content: '';
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75) 0%, black 30%, black 70%, rgba(0, 0, 0, 0.75) 100%);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+/* line 126, assets/style/_style.scss */
+footer p {
+  z-index: 1;
+}
+
+/* line 131, assets/style/_style.scss */
+h1, h2, h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+/* line 136, assets/style/_style.scss */
+nav {
+  border-top-style: solid;
+  border-bottom-style: solid;
+}
+
+/* line 140, assets/style/_style.scss */
+nav ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 0;
+  background-image: url("../media/images/low-contrast-linen.png");
+}
+
+/* line 151, assets/style/_style.scss */
+nav li {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20%;
+  font-size: initial;
+}
+
+@media (max-width: 80em) {
+  /* line 151, assets/style/_style.scss */
+  nav li {
+    width: 25%;
+  }
+}
+
+/* line 161, assets/style/_style.scss */
+nav a,
+nav a:link,
+nav a:active,
+nav a:visited {
+  margin: 0;
+  padding: 0;
+  color: rgba(10, 3, 15, 0.75);
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-size: 1.5em;
+  text-decoration: none;
+  height: 3em;
+  line-height: 2.75em;
+  vertical-align: middle;
+  text-align: center;
+  transition: color 0.8s;
+  background-size: 100%;
+  position: relative;
+  z-index: 100;
+}
+
+@media (max-width: 50em) {
+  /* line 161, assets/style/_style.scss */
+  nav a,
+nav a:link,
+nav a:active,
+nav a:visited {
+    font-size: 1.2em;
+  }
+}
+
+/* line 29, assets/style/_mixins.scss */
+nav a:before,
+nav a:link:before,
+nav a:active:before,
+nav a:visited:before {
+  background: #332B3A;
+  background: linear-gradient(to right, rgba(51, 43, 58, 0), #332b3a, rgba(51, 43, 58, 0));
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  z-index: -100;
+  transition: opacity 0.4s;
+}
+
+/* line 43, assets/style/_mixins.scss */
+nav a:hover:before,
+nav a:link:hover:before,
+nav a:active:hover:before,
+nav a:visited:hover:before {
+  opacity: 1;
+}
+
+/* line 185, assets/style/_style.scss */
+nav a:active, nav a:focus,
+nav a:link:active,
+nav a:link:focus,
+nav a:active:active,
+nav a:active:focus,
+nav a:visited:active,
+nav a:visited:focus {
+  outline-style: none;
+}
+
+/* line 191, assets/style/_style.scss */
+nav a:hover {
+  color: #E9E2EE;
+}
+
+/* line 196, assets/style/_style.scss */
+nav .selected {
+  text-decoration: underline !important;
+}
+
+/* line 201, assets/style/_style.scss */
+section.solutions {
+  background: linear-gradient(57.4deg, #f9ceb7 4.6%, #eaaeca 26%, #d2b6e2 49.1%, #add1f2 86.5%);
+}
+
+/* line 210, assets/style/_style.scss */
+section.terminal {
+  border-radius: 1em;
+  background-color: rgba(0, 0, 0, 0.75);
+  border: 2px solid rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 1em;
+  padding-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  font-family: "Fira Code", monospace;
+  font-weight: 300;
+  overflow: hidden;
+  transition: border 0.4s;
+}
+
+/* line 227, assets/style/_style.scss */
+section.terminal h3 {
+  text-align: center;
+  padding: 0.2em;
+}
+
+/* line 232, assets/style/_style.scss */
+section.terminal h4 {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* line 239, assets/style/_style.scss */
+section.terminal p {
+  margin: 0;
+}
+
+/* line 243, assets/style/_style.scss */
+section.terminal span.path {
+  color: cyan;
+}
+
+/* line 246, assets/style/_style.scss */
+section.terminal span.prompt {
+  color: pink;
+}
+
+/* line 251, assets/style/_style.scss */
+section.terminal .dots {
+  height: 0.5em;
+  width: 0.5em;
+  border-radius: 50%;
+  background-color: gray;
+  position: absolute;
+  margin-top: 0.75em;
+  margin-left: 1em;
+  transition: background-color 0.4s;
+}
+
+/* line 261, assets/style/_style.scss */
+section.terminal .dots::before {
+  content: '';
+  height: 0.5em;
+  width: 0.5em;
+  border-radius: 50%;
+  background-color: gray;
+  position: absolute;
+  transform: translate(-1em, 0);
+  transition: background-color 0.4s;
+}
+
+/* line 271, assets/style/_style.scss */
+section.terminal .dots::after {
+  content: '';
+  height: 0.5em;
+  width: 0.5em;
+  border-radius: 50%;
+  background-color: gray;
+  position: absolute;
+  transform: translate(1em, 0);
+  transition: background-color 0.4s;
+}
+
+/* line 281, assets/style/_style.scss */
+section.terminal .dots:hover {
+  background-color: #ffffc8;
+}
+
+/* line 284, assets/style/_style.scss */
+section.terminal .dots:hover::before {
+  background-color: #ffc8c8;
+}
+
+/* line 287, assets/style/_style.scss */
+section.terminal .dots:hover::after {
+  background-color: #c8ffc8;
+}
+
+/* line 292, assets/style/_style.scss */
+section.terminal:hover {
+  border: 2px solid cyan;
+}
+
+/*
+footer {
+	background-color: $footer-color;
+	color: $inverted-link-color;
+	background-image: url("../media/images/low-contrast-linen.png");
+
+	p {
+		font-size: 120%;
+	}
+}
+*/
 /* ==========================================================================
    Helper classes
    ========================================================================== */
