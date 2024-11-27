@@ -379,11 +379,32 @@ section.project .text h3 {
 /* line 224, assets/style/_layout.scss */
 footer {
   text-align: center;
-  min-height: 10em;
+  min-height: 12em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-size: 120%;
+}
+
+/* line 232, assets/style/_layout.scss */
+footer a.logo {
+  z-index: 1;
+  margin-top: 3em;
+}
+
+/* line 236, assets/style/_layout.scss */
+footer a.logo svg {
+  width: 100%;
+}
+
+/* line 240, assets/style/_layout.scss */
+footer a.logo img {
+  width: 4em;
+}
+
+/* line 245, assets/style/_layout.scss */
+footer p {
+  margin-bottom: 3em;
 }
 
 /* line 4, assets/style/_style.scss */
